@@ -62,7 +62,7 @@ if st.button('send'):
         cs.execute(sql_query)
         results_rows = cs.fetchall()
         results_columns = [description[0] for description in cs.description]
-        results = pd.Dataframe(rows, columns = columns)
+        results = pd.DataFrame(rows, columns = columns)
         
         # Show query results
         if results:
