@@ -30,9 +30,8 @@ selected_db = st.selectbox("choose a database", databases)
 input_text = st.text_input("What can I do for you?")
 # convert_to_sql function
 
-def convert_to_sql(input_content, selected_database):
+def convert_to_sql(input_content):
     input_content = input_content.lower()
-    selected_database = selected_db
 
     if input_content == "view all customer":
         return f"SELECT * FROM customer;"
@@ -45,15 +44,16 @@ def convert_to_sql(input_content, selected_database):
     else:
         return "I'm sorry I can't recognize your query, please replace it with another way"
 
+
 # send button
 if st.button('send'):
     if input_text:
         # Here you need to convert the user's natural language into a SQL query
         # This may require natural language processing or some sort of mapping logic
-        sql_query = convert_to_sql(input_text, selected_db)
+        sql_query = convert_to_sql(input_text)
         
         # Switching databases
-        cs.execute(f"USE DATABASE {selected_db}")
+        cs.execute(f"USE DATABASE SNOWFLAKE_SAMPLE_DATA")
         
         # Executing SQL Queries
         cs.execute(sql_query)
