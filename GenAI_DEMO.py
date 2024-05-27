@@ -53,7 +53,9 @@ if st.button('send'):
         sql_query = convert_to_sql(input_text)
         
         # Switching databases
+        cs.execute(f"USE ROLE ACCOUNTADMIN")
         cs.execute(f"USE DATABASE SNOWFLAKE_SAMPLE_DATA")
+        cs.execute(f"USE SCHEMA TPCH_SF1")
         
         # Executing SQL Queries
         cs.execute(sql_query)
