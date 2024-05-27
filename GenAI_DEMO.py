@@ -61,12 +61,12 @@ if st.button('send'):
         # Executing SQL Queries
         cs.execute(sql_query)
         rows = cs.fetchall()
-        columns = [col[0] for col in cs.description]
-        results = pd.DataFrame(rows, columns=columns)
-
-        # Show query results
-        if results:
+        if rows:
+            columns = [col[0] for col in cs.description]
+            results = pd.DataFrame(rows, columns=columns)
+            #show query result
             st.dataframe(results)
+            
         else:
             st.write("No results found.")
     else:
