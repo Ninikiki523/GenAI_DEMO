@@ -1,6 +1,7 @@
 import streamlit as st
 import snowflake.connector
 from snowflake.connector import DictCursor
+import pandas as pd
 
 # Snowflake parameter
 conn_params = {
@@ -59,7 +60,9 @@ if st.button('send'):
         
         # Executing SQL Queries
         cs.execute(sql_query)
-        results = cs.fetchall()
+        results_rows = cs.fetchall()
+        results_columns = [description[0] for description in cs.description]
+        results = pd.Dataframe(rows, columns = columns)
         
         # Show query results
         if results:
