@@ -63,6 +63,8 @@ if st.button('send'):
         rows = cs.fetchall()
         columns = [col[0] for col in cs.description]
         results = pd.DataFrame(rows, columns=columns)
+        st.dataframe(results)
+        st.stop()
 
         # Show query results
         if results:
