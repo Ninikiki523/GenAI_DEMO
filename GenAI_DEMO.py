@@ -31,19 +31,19 @@ input_text = st.text_input("What can I do for you?")
 # convert_to_sql function
 
 def convert_to_sql(input_content, selected_database):
-    input_text = input_text.lower()
+    input_content = input_content.lower()
+    selected_database = selected_db
 
-    if input_text == "view all customer":
+    if input_content == "view all customer":
         return f"SELECT * FROM customer;"
-    elif input_text == "tell me the number of customers":
+    elif input_content == "tell me the number of customers":
         return f"SELECT COUNT(*) FROM customer;"
-    elif input_text == "check out the latest orders":
+    elif input_content == "check out the latest orders":
         return f"SELECT * FROM orders ORDER BY O_ORDERDATE DESC LIMIT 1;"
-    #elif input_text == "tell me the top 10 key account":
+    #elif input_content == "tell me the top 10 key account":
     #    return f"SELECT * FROM orders ORDER BY O_ORDERDATE DESC LIMIT 1;"
     else:
         return "I'm sorry I can't recognize your query, please replace it with another way"
-
 
 # send button
 if st.button('send'):
