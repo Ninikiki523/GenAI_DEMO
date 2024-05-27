@@ -8,7 +8,7 @@ conn_params = {
     "password": "Mayday_523",
     "account": "CHPVMZF-CH77012",
     "warehouse": "COMPUTE_WH",
-    "database": "SNOWFLAKE_SAMPLE_DATA"
+    "database": "SNOWFLAKE_SAMPLE_DATA",
     "schema": "TPCH_SF1"
 }
 
