@@ -51,8 +51,8 @@ cs.execute("SHOW DATABASES")
 databases = [db['name'] for db in cs]
 
 #Create a checkbox to allow users to select a database
-st.markdown("<p style='color: pink;'>Please select a database</p>", unsafe_allow_html=True)
-selected_db = st.selectbox("choose a database", databases)
+st.sidebar.markdown("<p style='color: pink;'>Please select a database</p>", unsafe_allow_html=True)
+selected_db = st.sidebar.selectbox("choose a database", databases)
 
 #schema list
 cs.execute(f"USE ROLE ACCOUNTADMIN")
@@ -61,8 +61,8 @@ cs.execute("SHOW SCHEMAS")
 schemas = [schema['name'] for schema in cs]
 
 #Create a checkbox to allow users to select a schema
-st.markdown("<p style='color: pink;'>Please select a schema</p>", unsafe_allow_html=True)
-selected_schema = st.selectbox("choose a schema", schemas)
+st.sidebar.markdown("<p style='color: pink;'>Please select a schema</p>", unsafe_allow_html=True)
+selected_schema = st.sidebar.selectbox("choose a schema", schemas)
 
 # User input box
 input_text = st.text_input("What can I do for you?")
