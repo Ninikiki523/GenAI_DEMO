@@ -4,8 +4,8 @@ snowflake-snowpark-python
 streamlit==1.31.1
 requests
 pandas==1.5.0
-snowflake_snowpark_python==1.5.0
-snowflake-snowpark-python[pandas]
+#snowflake_snowpark_python==1.5.0
+#snowflake-snowpark-python[pandas]
 tiktoken==0.5.2
 openai==1.17.0
 langchain==0.1.15
