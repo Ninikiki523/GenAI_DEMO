@@ -44,7 +44,7 @@ databases = [db['name'] for db in cs]
 
 model = st.radio(
     "",
-    options=["Claude-3 Haiku", "Mixtral 8x7B", "Llama 3-70B", "GPT-3.5", "Snowflake Arctic"],
+    options=databases,
     index=0,
     horizontal=True,
 )
