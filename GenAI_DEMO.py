@@ -59,13 +59,13 @@ selected_db = st.radio(
     horizontal=True,
 )
 
-# Create a checkbox to allow users to select a database
+# Or Create a checkbox to allow users to select a database
 #selected_db = st.selectbox("choose a database", databases)
 
 # User input box
 input_text = st.text_input("What can I do for you?")
-# convert_to_sql function
 
+# convert_to_sql function. Here are just some examples for the sake of demonstration, subsequently we should enrich the content with the help of GPT's model
 def convert_to_sql(input_content):
     input_content = input_content.lower()
 
@@ -76,7 +76,7 @@ def convert_to_sql(input_content):
     elif input_content == "check out the latest orders":
         return f"SELECT * FROM orders ORDER BY O_ORDERDATE DESC LIMIT 1;"
     #elif input_content == "tell me the top 10 key account":
-    #    return f"SELECT * FROM orders ORDER BY O_ORDERDATE DESC LIMIT 1;"
+    #    return f";"
     else:
         return "I'm sorry I can't recognize your query, please replace it with another way"
 
@@ -90,7 +90,7 @@ if st.button('send'):
         
         # Switching databases
         cs.execute(f"USE ROLE ACCOUNTADMIN")
-        cs.execute(f"USE DATABASE SNOWFLAKE_SAMPLE_DATA")
+        cs.execute(f"USE DATABASE {selected_db}")
         cs.execute(f"USE SCHEMA TPCH_SF1")
         
         # Executing SQL Queries
@@ -99,7 +99,7 @@ if st.button('send'):
         if rows:
             columns = [col[0] for col in cs.description]
             results = pd.DataFrame(rows, columns=columns)
-            #show query result
+            #show query result and drop the index col
             result_no_index = results.reset_index(drop=True)
             st.dataframe(result_no_index)
             
