@@ -8,9 +8,9 @@ conn_params = {
     "user": "zhemma523",
     "password": "Mayday_523",
     "account": "CHPVMZF-CH77012",
-    "warehouse": "COMPUTE_WH",
-    "database": "SNOWFLAKE_SAMPLE_DATA",
-    "schema": "TPCH_SF1"
+    "warehouse": "COMPUTE_WH"
+    #"database": "SNOWFLAKE_SAMPLE_DATA",
+    #"schema": "TPCH_SF1"
 }
 
 # connection
