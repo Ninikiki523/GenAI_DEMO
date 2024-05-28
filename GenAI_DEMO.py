@@ -6,7 +6,7 @@ import pandas as pd
 # Snowflake parameter
 conn_params = {
     "user": "zhemma523",
-    "password": "Mayday_523",
+    "password": "Exxeta_123456",
     "account": "CHPVMZF-CH77012",
     "warehouse": "COMPUTE_WH"
     #"database": "SNOWFLAKE_SAMPLE_DATA",
