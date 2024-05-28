@@ -48,9 +48,9 @@ model = st.radio(
     index=0,
     horizontal=True,
 )
-st.stop()
+
 # Create a checkbox to allow users to select a database
-selected_db = st.selectbox("choose a database", databases)
+#selected_db = st.selectbox("choose a database", databases)
 
 # User input box
 input_text = st.text_input("What can I do for you?")
