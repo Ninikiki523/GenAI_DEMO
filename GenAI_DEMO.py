@@ -37,21 +37,21 @@ st.markdown(gradient_text_html, unsafe_allow_html=True)
 
 st.caption("Talk with your own data")
 
-# database list
-cs.execute("SHOW DATABASES")
-databases = [db['name'] for db in cs]
-
-#select a model
+#select a model, here is just a sample, without real connection with the models
+st.markdown("<p style='color: blue;'>Please select a model</p>", unsafe_allow_html=True)
 model = st.radio(
     "",
     options=["Exxeta Pro", "Llama 3-70B", "GPT-3.5", "Snowflake Arctic"],
     index=0,
     horizontal=True,
 )
-st.write(model)
-st.stop()
+
+# database list
+cs.execute("SHOW DATABASES")
+databases = [db['name'] for db in cs]
 
 #select a database
+st.markdown("<p style='color: blue;'>Please select a database</p>", unsafe_allow_html=True)
 selected_db = st.radio(
     "",
     options=databases,
