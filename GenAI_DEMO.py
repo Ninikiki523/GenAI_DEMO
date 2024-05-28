@@ -18,7 +18,24 @@ ctx = snowflake.connector.connect(**conn_params)
 cs = ctx.cursor(DictCursor)
 
 # title
-st.title('Exxeta Chatbot')
+gradient_text_html = """
+<style>
+.gradient-text {
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, black, pink);
+    background: linear-gradient(to right, black, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+    font-size: 3em;
+}
+</style>
+<div class="gradient-text">DIA Chat</div>
+"""
+
+st.markdown(gradient_text_html, unsafe_allow_html=True)
+
+st.caption("Talk with your own data")
 
 # database list
 cs.execute("SHOW DATABASES")
