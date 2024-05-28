@@ -66,14 +66,13 @@ selected_db = st.radio(
 cs.execute(f"USE ROLE ACCOUNTADMIN")
 cs.execute(f"USE DATABASE {selected_db}")
 cs.execute("SHOW SCHEMAS")
-st.stop()
 schemas = [schema['name'] for schema in cs]
 
 #select a schema
 st.markdown("<p style='color: pink;'>Please select a schema</p>", unsafe_allow_html=True)
 selected_schema = st.radio(
     "",
-    options=databases,
+    options=schemas,
     index=0,
     horizontal=True,
 )
