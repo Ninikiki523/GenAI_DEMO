@@ -63,7 +63,7 @@ selected_db = st.radio(
 #selected_db = st.selectbox("choose a database", databases)
 
 #schema list
-cs.exucute(f"USE DATABASE {selected_db}")
+#cs.exucute(f"USE DATABASE {selected_db}")
 cs.execute("SHOW SCHEMAS")
 schemas = [schema['name'] for schema in cs]
 
