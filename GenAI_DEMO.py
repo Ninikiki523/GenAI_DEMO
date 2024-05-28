@@ -62,6 +62,20 @@ selected_db = st.radio(
 # Or Create a checkbox to allow users to select a database
 #selected_db = st.selectbox("choose a database", databases)
 
+#schema list
+cs.exucute(f"USE DATABASE {selected_db}")
+cs.execute("SHOW SCHEMAS")
+schemas = [schema['name'] for schema in cs]
+
+#select a schema
+st.markdown("<p style='color: pink;'>Please select a schema</p>", unsafe_allow_html=True)
+selected_schema = st.radio(
+    "",
+    options=databases,
+    index=0,
+    horizontal=True,
+)
+
 # User input box
 input_text = st.text_input("What can I do for you?")
 
