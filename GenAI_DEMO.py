@@ -37,6 +37,11 @@ st.markdown(gradient_text_html, unsafe_allow_html=True)
 
 st.caption("Talk with your own data")
 
+# database list
+cs.execute("SHOW DATABASES")
+databases = [db['name'] for db in cs]
+
+
 model = st.radio(
     "",
     options=["Claude-3 Haiku", "Mixtral 8x7B", "Llama 3-70B", "GPT-3.5", "Snowflake Arctic"],
@@ -44,10 +49,6 @@ model = st.radio(
     horizontal=True,
 )
 st.stop()
-# database list
-cs.execute("SHOW DATABASES")
-databases = [db['name'] for db in cs]
-
 # Create a checkbox to allow users to select a database
 selected_db = st.selectbox("choose a database", databases)
 
