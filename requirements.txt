@@ -3,4 +3,12 @@ snowflake-connector-python
 snowflake-snowpark-python
 streamlit==1.31.1
 requests
-pandas
+pandas==1.5.0
+snowflake_snowpark_python==1.5.0
+snowflake-snowpark-python[pandas]
+tiktoken==0.5.2
+openai==1.17.0
+langchain==0.1.15
+langchain_openai==0.1.2
+langchain-community==0.0.32
+langchain-core==0.1.41
