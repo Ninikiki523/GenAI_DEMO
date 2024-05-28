@@ -66,6 +66,7 @@ selected_db = st.radio(
 cs.execute(f"USE ROLE ACCOUNTADMIN")
 cs.execute(f"USE DATABASE {selected_db}")
 cs.execute("SHOW SCHEMAS")
+st.stop()
 schemas = [schema['name'] for schema in cs]
 
 #select a schema
