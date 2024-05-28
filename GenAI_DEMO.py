@@ -100,7 +100,7 @@ if st.button('send'):
             columns = [col[0] for col in cs.description]
             results = pd.DataFrame(rows, columns=columns)
             #show query result
-            st.dataframe(results,index=False)
+            st.dataframe(results)
             
         else:
             st.write("No results found.")
