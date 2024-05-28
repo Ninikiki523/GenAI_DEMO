@@ -92,7 +92,7 @@ if st.button('send'):
         # Switching databases
         cs.execute(f"USE ROLE ACCOUNTADMIN")
         cs.execute(f"USE DATABASE {selected_db}")
-        cs.execute(f"USE SCHEMA TPCH_SF1")
+        cs.execute(f"USE SCHEMA {selected_schema}")
         
         # Executing SQL Queries
         cs.execute(sql_query)
