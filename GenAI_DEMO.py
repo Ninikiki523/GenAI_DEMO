@@ -41,8 +41,16 @@ st.caption("Talk with your own data")
 cs.execute("SHOW DATABASES")
 databases = [db['name'] for db in cs]
 
-
+#select a model
 model = st.radio(
+    "",
+    options=["Claude-3 Haiku", "Mixtral 8x7B", "Llama 3-70B", "GPT-3.5", "Snowflake Arctic"],
+    index=0,
+    horizontal=True,
+)
+
+#select a database
+selected_db = st.radio(
     "",
     options=databases,
     index=0,
