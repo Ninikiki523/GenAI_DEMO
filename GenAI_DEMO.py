@@ -100,7 +100,8 @@ if st.button('send'):
             columns = [col[0] for col in cs.description]
             results = pd.DataFrame(rows, columns=columns)
             #show query result
-            st.dataframe(results)
+            result_no_index = df.reset_index(drop=True)
+            st.dataframe(result_no_index)
             
         else:
             st.write("No results found.")
