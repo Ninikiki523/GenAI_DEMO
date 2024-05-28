@@ -63,7 +63,8 @@ selected_db = st.radio(
 #selected_db = st.selectbox("choose a database", databases)
 
 #schema list
-#cs.exucute(f"USE DATABASE {selected_db}")
+cs.execute(f"USE ROLE ACCOUNTADMIN")
+cs.execute(f"USE DATABASE {selected_db}")
 cs.execute("SHOW SCHEMAS")
 schemas = [schema['name'] for schema in cs]
 
@@ -82,7 +83,6 @@ input_text = st.text_input("What can I do for you?")
 # convert_to_sql function. Here are just some examples for the sake of demonstration, subsequently we should enrich the content with the help of GPT's model
 def convert_to_sql(input_content):
     input_content = input_content.lower()
-
     if input_content == "view all customer":
         return f"SELECT * FROM customer;"
     elif input_content == "tell me the number of customers":
