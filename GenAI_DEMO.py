@@ -34,7 +34,7 @@ gradient_text_html = """
 <div class="gradient-text">DIA Chat</div>
 """
 
-st.markdown(f"{exxeta_icon_html}{gradient_text_html}", unsafe_allow_html=True)
+st.markdown(f"{exxeta_icon_html}{gradient_text_html}{exxeta_icon_html}", unsafe_allow_html=True)
 
 st.caption("Talk with your own data")
 
