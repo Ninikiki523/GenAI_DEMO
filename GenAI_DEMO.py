@@ -18,7 +18,7 @@ ctx = snowflake.connector.connect(**conn_params)
 cs = ctx.cursor(DictCursor)
 
 # title
-exxeta_icon_html = "<img src='https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiZXh4ZXRhXC9hY2NvdW50c1wvMWVcLzQwMDExMThcL3Byb2plY3RzXC8zXC9hc3NldHNcL2YyXC8zMjRcL2I0MzA3NjI4Nzc1YmQxZTJhMGY1MDQ2NTA0MTE5MmMzLTE2MzM2MTMwNTkucG5nIn0:exxeta:wrfspUh9DuITqM5FZdxNHaLLCguddQ1Og_lF-P6LM4g?width=2400' class='icon' style='height:24px; width:24px;' />"
+exxeta_icon_html = "<img src='https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiZXh4ZXRhXC9hY2NvdW50c1wvMWVcLzQwMDExMThcL3Byb2plY3RzXC8zXC9hc3NldHNcL2YyXC8zMjRcL2I0MzA3NjI4Nzc1YmQxZTJhMGY1MDQ2NTA0MTE5MmMzLTE2MzM2MTMwNTkucG5nIn0:exxeta:wrfspUh9DuITqM5FZdxNHaLLCguddQ1Og_lF-P6LM4g?width=2400' class='icon' style='height:24px; width:24px; margin-top:10px; margin-bottom:10px;' />"
 gradient_text_html = """
 <style>
 .gradient-text {
