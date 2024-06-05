@@ -5,12 +5,16 @@ import pandas as pd
 
 # Snowflake parameter
 conn_params = {
-    "user": "zhemma523",
-    "password": "Exxeta123456",
-    "account": "CHPVMZF-CH77012",
-    "warehouse": "COMPUTE_WH"
+    #"user": "zhemma523",
+    #"password": "Exxeta123456",
+    #"account": "CHPVMZF-CH77012",
+    #"warehouse": "COMPUTE_WH"
     #"database": "SNOWFLAKE_SAMPLE_DATA",
     #"schema": "TPCH_SF1"
+    "user": "YZHENG",
+    "password": "Mayday_523",
+    "account": "RFJPAIV-EXXETA",
+    "warehouse": "COMPUTE_WH"
 }
 
 # connection
