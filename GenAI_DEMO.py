@@ -12,7 +12,7 @@ conn_params = {
     #"database": "SNOWFLAKE_SAMPLE_DATA",
     #"schema": "TPCH_SF1"
     #"user": "YZHENG",
-    #"password": "Mayday_523",
+    #"password": "Exxeta123456",
     #"account": "RFJPAIV-EXXETA",
     #"warehouse": "COMPUTE_WH"
 }
